@@ -69,6 +69,7 @@ def outlier_odd(list):
 
 
 ## persistence bugger
+02/Sept/2024
 Write a function, `persistence`, that takes in a positive parameter `num` and returns its multiplicative persistence, which is the number of times you must multiply the digits in `num` until you reach a single digit.
 
 <br>
