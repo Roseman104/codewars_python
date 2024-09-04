@@ -103,3 +103,35 @@ def persistence(num):
         print(x)
     return count
 ```
+
+## Does my number look big in this?
+A Narcissistic Number (or Armstrong Number) is a positive number which is the sum of its own digits, each raised to the power of the number of digits in a given base. In this Kata, we will restrict ourselves to decimal (base 10).
+
+
+For example, take 153 (3 digits), which is narcissistic:
+
+`1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153`
+
+and 1652 (4 digits), which isn't:
+
+`1^4 + 6^4 + 5^4 + 2^4 = 1 + 1296 + 625 + 16 = 1938`
+
+
+
+```python
+def narcissistic(value):
+    sum_num = 0
+    num_str = str(value)
+    length = len(num_str)
+    print(f'Value in: {value} Number Length: {length}')
+    for d in str(num_str):
+        n = int(d)
+        print(f'What is n right now: {n} to the power of {length}')
+        sum_num += n**length
+        print(f'What is the Sum currently: {sum_num}')
+    if sum_num == value:
+        print(sum_num)
+        return True
+    else:
+        return False
+```
